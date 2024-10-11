@@ -1,0 +1,88 @@
+
+// Color
+$primary_header:#1cc9ac;
+$primary_ligth_header:#4d8178;
+$blue_ligth_color:#44abda;
+$white_color:#fff;
+$black_color:#000;
+$golden_color:#eba801;
+$loading_color:#999;
+$box_shadow_loading_color:#ccc;
+$footer_color:#427c72;
+// BoxSadow
+$headerBoxShadow:4px 4px 4px 4px #ddd;
+$cardBoxShadow: 4px 4px 4px 4px $box_shadow_loading_color;
+
+// Font
+$fontSize: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+$searchfontSize: 16px;
+// Color
+$navLinkColor: $white_color;
+// Backgraund
+$headerBgColor: $primary_header;
+
+@mixin flexHeader($display, $content){
+    display: $display;
+    justify-content: $content;
+}
+@mixin flexItemsHeader($display, $content, $items){
+    display: $display;
+    justify-content: $content;
+    align-items: $items;
+} 
+@mixin flexNavHeader($display, $content, $items, $gap){
+    display: $display;
+    justify-content: $content;
+    align-items: $items;
+    gap: $gap;
+}
+@mixin transformHeader($tranform){
+    transform: $tranform;
+    -webkit-transform: $tranform;
+    -moz-transform: $tranform;
+    -ms-transform: $tranform;
+    -o-transform: $tranform;
+}
+@mixin transitionHeader($transition){
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+
+@mixin transformOriginHeader($transformOrigin){
+    transform-origin: $transformOrigin;
+    -webkit-transform-origin: $transformOrigin;
+    -ms-transform-origin: $transformOrigin;
+    -moz-transform-origin: $transformOrigin;
+    -o-transform-origin: $transformOrigin;
+}
+@mixin boxSizingHeader($boxSizing){
+    box-sizing: $boxSizing;
+    -webkit-box-sizing: $boxSizing;
+    -ms-box-sizing: $boxSizing;
+    -moz-box-sizing: $boxSizing;
+    -o-box-sizing: $boxSizing;
+}
+@mixin animationHeader($animation){
+    animation: $animation;
+    -webkit-animation: $animation;
+    -ms-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+}
+@mixin animationDelayHeader($animation){
+    animation-delay: $animation;
+    -webkit-animation-delay: $animation;
+    -ms-animation-delay: $animation;
+    -moz-animation-delay: $animation;
+    -o-animation-delay: $animation;
+}
+@mixin animationTimingFunctionHeader($animation){
+    animation-timing-function: $animation;
+    -webkit-animation-timing-function: $animation;
+    -ms-animation-timing-function: $animation;
+    -moz-animation-timing-function: $animation;
+    -o-animation-timing-function: $animation;
+}

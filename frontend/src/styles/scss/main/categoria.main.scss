@@ -1,0 +1,12 @@
+main{
+    @extend .main;
+}
+
+main .nav-title-main{
+    @extend .barrar_title_main;
+}
+
+// Cards
+@import './categoria/cards.categoria.main.scss';
+// Load
+@import './categoria/loading/card.load.categoria.main.scss';

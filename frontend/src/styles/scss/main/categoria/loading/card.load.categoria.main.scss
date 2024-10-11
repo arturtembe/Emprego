@@ -1,0 +1,67 @@
+.card-load-categoria-main{
+    @include flexItemsHeader(flex, center, center);
+    height: 100px; /* Remove after adding swiper js */
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: $cardBoxShadow;
+}
+
+.card-load-categoria-main .lazy_lds_ellipsis,
+.card-load-categoria-main .lazy_lds_ellipsis div {
+    @include boxSizingHeader(border-box);
+}
+.card-load-categoria-main .lazy_lds_ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.card-load-categoria-main .lazy_lds_ellipsis div {
+    position: absolute;
+    top: 33.33333px;
+    width: 13.33333px;
+    height: 13.33333px;
+    border-radius: 50%;
+    background: $loading_color;
+    @include animationTimingFunctionHeader(cubic-bezier(0, 1, 1, 0))
+}
+.card-load-categoria-main .lazy_lds_ellipsis div:nth-child(1) {
+    left: 8px;
+    @include animationHeader(lds-ellipsis1 0.6s infinite);
+}
+.card-load-categoria-main .lazy_lds_ellipsis div:nth-child(2) {
+    left: 8px;
+    @include animationHeader(lds-ellipsis2 0.6s infinite);
+}
+.card-load-categoria-main .lazy_lds_ellipsis div:nth-child(3) {
+    left: 32px;
+    @include animationHeader(lds-ellipsis2 0.6s infinite);
+}
+.card-load-categoria-main .lazy_lds_ellipsis div:nth-child(4) {
+    left: 56px;
+    @include animationHeader(lds-ellipsis3 0.6s infinite);
+}
+@keyframes lds-ellipsis1 {
+    0% {
+        @include transformHeader(scale(0));
+    }
+    100% {
+        @include transformHeader(scale(1));
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+        @include transformHeader(scale(1));
+    }
+    100% {
+        @include transformHeader(scale(0));
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+        @include transformHeader(translate(0, 0));
+    }
+    100% {
+        @include transformHeader(translate(24px, 0));
+    }
+}

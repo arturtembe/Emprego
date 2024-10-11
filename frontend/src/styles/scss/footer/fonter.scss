@@ -1,0 +1,13 @@
+
+footer{
+    width: 100%;
+    background-color: $footer_color;
+    padding: 20px 0;
+    @include flexItemsHeader(flex, center, center);
+
+    span{
+        color: $white_color;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+}
